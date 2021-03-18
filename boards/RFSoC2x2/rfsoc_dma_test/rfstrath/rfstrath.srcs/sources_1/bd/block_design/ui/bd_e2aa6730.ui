@@ -1,0 +1,54 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.775052",
+   "Default View_TopLeft":"835,-128",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port adc0_clk -pg 1 -lvl 0 -x -20 -y 210 -defaultsOSRD
+preplace port adc2_clk -pg 1 -lvl 0 -x -20 -y 230 -defaultsOSRD
+preplace port dac0_clk -pg 1 -lvl 0 -x -20 -y 410 -defaultsOSRD
+preplace port dac1_clk -pg 1 -lvl 0 -x -20 -y 430 -defaultsOSRD
+preplace port sysref_in -pg 1 -lvl 0 -x -20 -y 450 -defaultsOSRD
+preplace port vin0_01 -pg 1 -lvl 0 -x -20 -y 470 -defaultsOSRD
+preplace port vin2_01 -pg 1 -lvl 0 -x -20 -y 690 -defaultsOSRD
+preplace port vout00 -pg 1 -lvl 7 -x 2260 -y 470 -defaultsOSRD
+preplace port vout10 -pg 1 -lvl 7 -x 2260 -y 490 -defaultsOSRD
+preplace portBus lmk_reset -pg 1 -lvl 7 -x 2260 -y 60 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1100 -y 560 -defaultsOSRD
+preplace inst clk_wiz_260M -pg 1 -lvl 2 -x 480 -y 620 -defaultsOSRD
+preplace inst lmk_reset_low -pg 1 -lvl 6 -x 2080 -y 60 -defaultsOSRD
+preplace inst radio -pg 1 -lvl 6 -x 2080 -y 470 -defaultsOSRD
+preplace inst rst_ps8_100M -pg 1 -lvl 5 -x 1560 -y 100 -defaultsOSRD
+preplace inst rst_ps8_260M -pg 1 -lvl 3 -x 760 -y 590 -defaultsOSRD
+preplace inst rst_ps8_300M -pg 1 -lvl 1 -x 200 -y 590 -defaultsOSRD
+preplace inst zynq_ultra_ps_e -pg 1 -lvl 5 -x 1560 -y 320 -defaultsOSRD
+preplace netloc clk_wiz_260M_clk_out1 1 2 4 580 690 930 680 1250 530 NJ
+preplace netloc clk_wiz_260M_locked 1 2 1 N 630
+preplace netloc lmk_reset_low_dout 1 6 1 NJ 60
+preplace netloc rst_ps8_260M_peripheral_aresetn 1 3 3 940 670 1260J 550 N
+preplace netloc rst_ps8_300M_peripheral_aresetn 1 1 1 370 610n
+preplace netloc rst_ps8_96M_peripheral_aresetn 1 5 1 1910 140n
+preplace netloc zynq_ultra_ps_e_pl_clk0 1 4 2 1260 220 1890
+preplace netloc zynq_ultra_ps_e_pl_clk1 1 0 6 30 690 380 700 NJ 700 NJ 700 NJ 700 1860
+preplace netloc zynq_ultra_ps_e_pl_resetn0 1 0 6 20 490 NJ 490 570 210 NJ 210 1240 210 1900
+preplace netloc dac1_clk_1 1 0 6 NJ 430 NJ 430 NJ 430 NJ 430 NJ 430 NJ
+preplace netloc vin0_01_1 1 0 6 0J 460 NJ 460 NJ 460 NJ 460 NJ 460 1880J
+preplace netloc axi_smc_M00_AXI 1 4 1 1240 300n
+preplace netloc adc0_clk_1 1 0 6 0J 200 NJ 200 NJ 200 NJ 200 NJ 200 1940J
+preplace netloc dac0_clk_1 1 0 6 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ
+preplace netloc zynq_ultra_ps_e_M_AXI_HPM0_LPD 1 5 1 1930 290n
+preplace netloc sysref_in_1 1 0 6 NJ 450 NJ 450 NJ 450 NJ 450 NJ 450 NJ
+preplace netloc vin2_01_1 1 0 6 10J 470 NJ 470 NJ 470 NJ 470 NJ 470 1870J
+preplace netloc radio_vout00 1 6 1 2240J 460n
+preplace netloc adc2_clk_1 1 0 6 NJ 230 NJ 230 NJ 230 NJ 230 NJ 230 1920J
+preplace netloc usp_rf_data_converter_vout10 1 6 1 2240J 480n
+preplace netloc SpectrumAnalyser_AXI4_Master 1 3 4 950 660 NJ 660 NJ 660 2230
+preplace netloc radio_M_AXI_S2MM 1 3 4 960 650 NJ 650 NJ 650 2220
+levelinfo -pg 1 -20 200 480 760 1100 1560 2080 2260
+pagesize -pg 1 -db -bbox -sgen -130 0 2400 710
+"
+}
+{
+   "da_axi4_cnt":"3"
+}
