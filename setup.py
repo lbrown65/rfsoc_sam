@@ -9,7 +9,7 @@ package_name = 'rfsoc_sam'
 pip_name = 'rfsoc-sam'
 board = os.environ['BOARD']
 repo_board_folder = f'boards/{board}/rfsoc_sam'
-alt_overlay_folder = [f'boards/{board}/rfsoc_sam', f'boards/{board}/rfsoc_sam_ofdm']
+alt_overlay_folder = [f'boards/{board}/rfsoc_sam']
 board_notebooks_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
 board_project_dir = os.path.join(board_notebooks_dir, 'spectrum-analyzer')
 
@@ -57,19 +57,28 @@ def copy_notebooks():
     dst_nb_dir = os.path.join(board_project_dir)
     copy_tree(src_nb_dir, dst_nb_dir)
     
+# copy xrfclk file to python package (gen3 devices only)
+def copy_xrfclk():
+    src_at_dir = os.path.join(repo_board_folder, 'xrfclk')
+    if os.path.exists(src_at_dir):
+        dst_at_dir = os.path.join('xrfclk')
+        copy_tree(src_at_dir, dst_at_dir)
+        data_files.extend(
+            [os.path.join("..", dst_at_dir, f) for f in os.listdir(dst_at_dir)])
+    
 check_env()
 check_path()
 copy_overlays()
 copy_assets()
 copy_drivers()
 copy_notebooks()
+copy_xrfclk()
 
 setup(
     name=package_name,
-    version='0.3.1',
+    version='0.4.2',
     install_requires=[
-        'pynq==2.6',
-        'rfsoc-freqplan @ https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.1.0.tar.gz',
+        'pynq==2.7',
     ],
     url='https://github.com/strath-sdr/rfsoc_sam',
     license='BSD 3-Clause License',
@@ -80,3 +89,4 @@ setup(
         '': data_files,
     },
     description="PYNQ example of using the RFSoC as a Spectrum Analyzer.")
+
